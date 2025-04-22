@@ -1,0 +1,22 @@
+#notificaciones {
+    padding: 20px;
+  }
+  
+  #notificaciones h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #notificaciones-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #notificaciones-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  

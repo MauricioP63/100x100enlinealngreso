@@ -1,0 +1,104 @@
+<!-- Botón para abrir el modal -->
+<button class="custom-modal-btn" onclick="openCustomModal()">Abrir Modal</button>
+
+<!-- Modal -->
+<div class="custom-modal-overlay" id="customModalOverlay">
+    <div class="custom-modal">
+        <h2>Modal Encapsulado</h2>
+        <p>Este modal no interferirá con tu código existente.</p>
+        <button class="custom-modal-close-btn" onclick="closeCustomModal()">Cerrar</button>
+    </div>
+</div>
+
+<style>
+    /* Estilos del modal encapsulado */
+    .custom-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    }
+
+    .custom-modal {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 90%;
+        width: 400px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .custom-modal h2 {
+        margin: 0 0 10px;
+    }
+
+    .custom-modal p {
+        margin: 0 0 20px;
+    }
+
+    .custom-modal-btn,
+    .custom-modal-close-btn {
+        padding: 10px 20px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .custom-modal-btn:hover,
+    .custom-modal-close-btn:hover {
+        background: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+        .custom-modal {
+            width: 90%;
+        }
+    }
+</style>
+
+<script>
+    // Funciones para abrir y cerrar el modal
+    const customModalOverlay = document.getElementById('customModalOverlay');
+
+    function openCustomModal() {
+        customModalOverlay.style.display = 'flex';
+    }
+
+    function closeCustomModal() {
+        customModalOverlay.style.display = 'none';
+    }
+</script>
+
+
+
+
+<div class="custom-modal-overlay" id="customModalOverlay">
+    <div class="custom-modal">
+        <h2 style="" class="h1 pb-2 pb-md-0 mb-4 mb-md-5">Confirm Your Selection</h2>
+        <hr >
+        <h3  class="h4 mb-3">Industry:</h3>
+        <p  id="industry1">$industrias</p>
+        <hr >
+        <h3  class="h4 mb-3">Timeline:</h3>
+        <p  id="time1">$time</p>
+        <hr >
+        <h3  class="h4 mb-3">Functionalities:</h3>
+        <p  id="func1">$func</p>
+        <hr >
+        <div class="mb-4">
+          <label for="email-input"  style="color: #0b0f19;"class="form-label">Email</label>
+          <input class="form-control" style="color: #0b0f19; border-color:#0b0f19 ;" type="email" id="email-input" value="email@example.com">
+        </div>
+        <button class="btn btn-danger my-1 me-1" onclick="closeCustomModal()">Cancel</button>
+        <button class="btn btn-success my-1 me-1" onclick="carl()">Confirm</button>
+    </div>
+  </div>

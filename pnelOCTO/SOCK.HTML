@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Frontend</title>
+</head>
+<body>
+    <h1>Conexión WebSocket en el Frontend</h1>
+    <button onclick="br()">actualizar</button>
+    <button onclick="brs()">Cerrar</button>
+    <button onclick="brso()">ABRIR</button>
+
+    <script>
+       
+        const socket = new WebSocket('ws://localhost:8080');
+
+        socket.onopen = () => {
+            socket.send(JSON.stringify({ type: 'user', username: 'pedro' }));
+           
+        };
+
+        socket.onmessage = (event) => {
+            console.log('Mensaje recibido del servidor:', event.data);
+
+        };
+
+        socket.onclose = () => {
+            console.log('Conexión cerrada');
+        };
+
+        socket.onerror = (error) => {
+            console.error('Error en la conexión de WebSocket:', error);
+        };
+        function br(params) {
+           
+            socket.send("Barce1987")
+            
+        }
+        function brs(params) {
+           
+           socket.close(  )
+           
+       }
+       function brso(params) {
+           
+           socket.onopen()
+           
+       }
+    </script>
+</body>
+</html>
