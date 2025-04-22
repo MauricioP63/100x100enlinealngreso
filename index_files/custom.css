@@ -1,0 +1,1004 @@
+/*================================================================================
+	Item Name: Materialize - Material Design Admin Template
+	Version: 5.0
+	Author: PIXINVENT
+	Author URL: https://themeforest.net/user/pixinvent/portfolio
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN CSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+/*.sidenav-dark .brand-sidebar {
+    background: #dcdcdc;
+}*/
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("../../fonts/Roboto-Light.ttf");
+
+ 
+    font-family: "Roboto-BlackItalic";
+    src: url("../../fonts/Roboto-BlackItalic.ttf");
+
+    font-family: "Roboto-Thin";
+    src: url("../../fonts/Roboto-Thin.ttf");
+    /**/
+    font-family: "OPTIMA";
+    src: url("../../fonts/OPTIMA.ttf");
+
+    font-family: "OPTIMA-B";
+    src: url("../../fonts/OPTIMA_B.ttf");
+
+    font-family: "Optima-Italic";
+    src: url("../../fonts/Optima_Italic.ttf");
+
+    font-family: "Optima-Medium";
+    src: url("../../fonts/Optima-Medium.ttf");
+
+    font-family: "Roboto-Black";
+    src: url("../../fonts/Roboto-Black.ttf");
+
+    font-family: "Roboto-Bold";
+    src: url("../../fonts/Roboto-Bold.ttf");
+    font-family: "Roboto-BoldItalic";
+    src: url("../../fonts/Roboto-BoldItalic.ttf");
+    font-family: "Roboto-Italic";
+    src: url("../../fonts/Roboto-Italic.ttf");
+    font-family: "Roboto-LightItalic";
+    src: url("../../fonts/Roboto-LightItalic.ttf");
+
+    font-family: "Roboto-Medium";
+    src: url("../../fonts/Roboto-Medium.ttf");
+
+    font-family: "Roboto-MediumItalic";
+    src: url("../../fonts/Roboto-MediumItalic.ttf");
+
+    font-family: "Roboto-ThinItalic";
+    src: url("../../fonts/Roboto-ThinItalic.ttf");
+
+    font-family: "Serpentine-ICG-Bold";
+    src: url("../../fonts/Serpentine_ICG_Bold.ttf");
+
+
+    font-family: "Serpentine-ICG-LightOblique";
+    src: url("../../fonts/Serpentine-ICG-LightOblique.ttf");
+    font-family: "Serpentine-Bold";
+    src: url("../../fonts/Serpentine-Bold.ttf");
+    font-family: "SerpentineEF-BoldItalic";
+    src: url("../../fonts/SerpentineEF-BoldItalic.ttf");
+
+ 
+    font-family: "serpentine-icg";
+    src: url("../../fonts/Serpentine_ICG_Light.ttf");
+
+}
+@font-face {
+    font-family: "aref-ruqaa";
+    src: url("../../fonts/ArefRuqaa-Regular.ttf");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/Roboto-Regular.ttf");
+}
+@font-face { 
+    font-family: "mirza";
+    src: url("../../fonts/Mirza-Regular.ttf");
+}
+
+@font-face { 
+    font-family: "optima";
+    src: url("../../fonts/OPTIMA.TTF");
+}
+
+@font-face { 
+    font-family: "optima-Bold";
+    src: url("../../fonts/OPTIMA_B.TTF");
+}
+
+.ql-font-optima{
+    font-family: 'optima', sans-serif;  
+}
+.ql-font-optima-bold{
+    font-family: 'optima-Bold', sans-serif;  
+}
+
+.ql-font-mirza{
+    font-family: 'mirza', sans-serif;  
+}
+.ql-font-serpentine-icg{
+    font-family: 'serpentine-icg', sans-serif;  
+}
+.ql-font-aref-ruqaa {
+    font-family: 'aref-ruqaa', sans-serif;  
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../../fonts/Roboto-Bold.ttf')
+}
+
+img.logo-mid {
+    transition: all 1s;
+}
+
+.contentloadingSignIn {
+    display: none;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.brand-sidebar .logo-wrapper a.brand-logo img {
+    height: 35px;
+}
+
+.nav-collapsed .brand-sidebar .brand-logo {
+    padding: 8px 12px 22px 6px;
+}
+
+.nav-collapsed .brand-sidebar .logo-wrapper a.brand-logo img {
+    height: 46px;
+    width: 56px;
+}
+
+.sidenav-main.nav-collapsible.sidenav-dark.sidenav-active-rounded.nav-lock img.logo-mid {
+    display: none !important;
+    transition: all 1s;
+}
+
+.sidenav-main.nav-expanded.nav-lock.nav-collapsible.sidenav-dark.sidenav-active-rounded img.logo-mid {
+    display: none !important;
+    transition: all 1s;
+}
+
+.sidenav-main.nav-collapsible.sidenav-dark.sidenav-active-rounded.nav-expanded img.logo-mid {
+    display: none !important;
+    transition: all 1s;
+}
+
+.sidenav-main.nav-collapsible.sidenav-dark.sidenav-active-rounded:not(.nav-collapsed) img.logo-mid {
+    display: none !important;
+    transition: all 1s;
+}
+
+#contentButtonSignIn a {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+input:not([type]):focus:not([readonly])+label,
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+input[type=time]:not(.browser-default):focus:not([readonly])+label,
+input[type=date]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,
+input[type=tel]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
+input[type=search]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #192858;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #192858;
+    box-shadow: 0 1px 0 0 #192858;
+}
+
+.input-field .prefix.active {
+    color: #192858;
+}
+
+.forgot-pass {
+    color: #192858;
+}
+
+.brand-sidebar .brand-logo {
+    font-size: 2.1rem;
+    line-height: 0;
+    position: absolute;
+    display: inline-block;
+    margin: 1px 0;
+    padding: 12px 12px 22px 22px;
+    color: #333;
+}
+
+.logo-responsive-main {
+    margin-left: 92px;
+    margin-top: -8px;
+}
+
+.brand-sidebar .logo-wrapper a.navbar-toggler {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+
+.fonticon.add-item-main {
+    position: relative !important;
+    text-align: center;
+    width: 30px;
+    float: right;
+    right: 0px;
+}
+
+.content-icons-main {
+    margin-bottom: 30px;
+}
+
+.app-file-name .chip {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 32px;
+    display: inline-block;
+    height: 22px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0 12px;
+    color: rgba(0, 0, 0, .6);
+    border-radius: 16px;
+    background-color: #e4e4e4;
+}
+
+.sidenav li .collapsible-body a i {
+    font-size: 1.34rem !important;
+}
+
+.sidenav-main ul:nth-child(1) li a {
+    background: #193e72;
+}
+
+.threeChildHome li a {
+    background: #3a5a88 !important;
+}
+
+#sectionDetails input {
+    padding: 0px 0px 0px 0px !important;
+    border: 1px solid;
+    margin-bottom: 0px;
+    width: 96%;
+    margin-left: 4px;
+    font-size: 12px;
+
+}
+
+.main-loader {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    background-color: rgb(255, 255, 255);
+    z-index: 999999999;
+    display: none;
+}
+
+.main-loader .preloader-wrapper {
+    left: 48%;
+    top: 42%;
+}
+
+.font-Roboto-Light {
+    font-family: "Roboto-Light";
+}
+
+.font-Roboto-Regular {
+    font-family: "Roboto-Regular";
+}
+
+.font-Roboto-BlackItalic {
+    font-family: "Roboto-BlackItalic";
+}
+
+.font-Roboto-Light {
+    font-family: "Roboto-Light";
+}
+
+.font-Roboto-Thin {
+    font-family: "Roboto-Thin";
+}
+
+.dd-item>button[data-action="collapse"]:before {
+    color: white;
+}
+
+.dd-item>button:before {
+    color: white;
+}
+
+.dd-item>button:focus {
+    outline: none;
+    background-color: transparent !important;
+}
+
+#breadcrumbs-wrapper {
+    background: #480079f2 !important;
+}
+
+#breadcrumbs-wrapper .breadcrumbs-title {
+    color: white !important;
+}
+
+.add-main {
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 0px 6px;
+    position: relative;
+    top: -2px;
+    left: 34px;
+    color: black;
+    cursor: pointer;
+    z-index: 99999999;
+}
+
+.sp-colorize {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: rgba(239, 148, 62, 0.88);
+}
+
+.dd-item>button.deleteItems:before {
+    content: 'X';
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    text-indent: 0;
+}
+
+.dd-item>button.deleteItems {
+    position: relative;
+    float: right;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 0px 0px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.dd-item>button.editItems:before {
+    content: "Editar";
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    text-indent: 0;
+}
+
+.dd-item>button.editItems {
+    position: relative;
+    float: right;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 2px 0px;
+    cursor: pointer;
+    margin-right: 8px;
+    width: 50px;
+}
+
+.font-Roboto-Light {
+    font-family: "Roboto-Light";
+}
+
+.font-Roboto-Regular {
+    font-family: "Roboto-Regular";
+}
+
+.font-Roboto-BlackItalic {
+    font-family: "Roboto-BlackItalic";
+}
+
+.font-Roboto-Light {
+    font-family: "Roboto-Light";
+}
+
+.font-Roboto-Thin {
+    font-family: "Roboto-Thin";
+}
+
+
+.OPTIMA {
+    font-family: "OPTIMA";
+}
+
+.OPTIMA_B {
+    font-family: "OPTIMA_B";
+}
+
+.Optima_Italic {
+    font-family: "Optima_Italic";
+}
+
+.Optima-Medium {
+    font-family: "Optima-Medium";
+}
+
+.Roboto-Black {
+    font-family: "Roboto-Black";
+}
+
+.Roboto-Bold {
+    font-family: "Roboto-Bold";
+}
+
+.Roboto-BoldItalic {
+    font-family: "Roboto-BoldItalic";
+}
+
+.Roboto-Italic {
+    font-family: "Roboto-Italic";
+}
+
+.Roboto-LightItalic {
+    font-family: "Roboto-LightItalic";
+}
+
+.Roboto-Medium {
+    font-family: "Roboto-Medium";
+}
+
+.Roboto-MediumItalic {
+    font-family: "Roboto-MediumItalic";
+}
+
+.Roboto-ThinItalic {
+    font-family: "Roboto-ThinItalic";
+}
+
+.Serpentine_ICG_Bold {
+    font-family: "Serpentine_ICG_Bold";
+}
+
+.Serpentine_ICG_Light {
+    font-family: "Serpentine_ICG_Light";
+}
+
+.Serpentine_ICG_LightOblique {
+    font-family: "Serpentine_ICG_LightOblique";
+}
+
+.Serpentine-Bold {
+    font-family: "Serpentine-Bold";
+}
+
+.SerpentineEF-BoldItalic {
+    font-family: "SerpentineEF-BoldItalic";
+}
+
+.sp-container.sp-flat {
+    position: relative;
+    z-index: 2;
+}
+
+.content-items-autogestion .dropify-wrapper {
+    border-radius: 30px;
+}
+
+/*.contentDashboard{
+    padding-left: 100px;
+    padding-right: 100px;
+  
+  }*/
+.contentDashboard .card {
+    min-height: 225px;
+}
+
+.contentDashboard .card i {
+    font-size: 70px;
+    color: white;
+}
+
+@media only screen and (max-width: 1300px) {
+    .contentDashboard {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.contentSliderEmergente td {
+    border: 1px solid #cccccc5c;
+}
+
+button.addAction {
+    border: 2px solid #8824cd;
+    padding: 7px 9px;
+    border-radius: 25px;
+    background: #8824cd;
+    color: white;
+}
+
+.contentDashboard h5 {
+    font-size: 20px;
+}
+
+/* Set default font-family */
+#editor-container {
+    font-family: "Aref Ruqaa";
+    font-size: 18px;
+    height: 375px;
+}
+
+/* Set dropdown font-families */
+#toolbar-container .ql-font span[data-label="Aref Ruqaa"]::before {
+    font-family: "Aref Ruqaa";
+}
+
+#toolbar-container .ql-font span[data-label="Mirza"]::before {
+    font-family: "Mirza";
+}
+
+#toolbar-container .ql-font span[data-label="Roboto-Bold"]::before {
+    font-family: "Roboto-Bold";
+}
+
+/* Set content font-families */
+.ql-font-mirza {
+    font-family: "Mirza";
+}
+
+.ql-font-roboto-bold {
+    font-family: "Roboto-Bold" !important;
+}
+
+.select2-container.select2-container--default.select2-container--open {
+    z-index: 9999999;
+}
+
+.select2-selection.select2-selection--single[aria-labelledby="select2-select-list-page-container"] {
+    background: transparent;
+}
+
+#view-input-fields-personas th {
+    border: 2px solid #cccccc61;
+}
+
+.swal2-confirm.swal2-styled {
+    background-color: #0ca2e6 !important;
+}
+
+.spinner-100Banco {
+    border-color: #182858;
+}
+
+.progress {
+    height: 30px;
+    color: #FFF;
+}
+
+.progress .determinate {
+    text-align: center;
+}
+
+.fc .fc-button {
+    background: #510d7f !important;
+    border-color: #510d7f !important;
+}
+
+.buttonEditCanales {
+    border-radius: 15px;
+    background: #510d7f;
+    border: none;
+    color: white;
+    padding: 2px 5px;
+}
+
+.buttonEditCanales i {
+    font-size: 17px;
+}
+
+.contentEditSection {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.ql-tooltip.ql-editing {
+    left: 0px !important;
+}
+
+.avatar-status.avatar-online {
+    margin-left: 15px;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=arial]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=arial]::before {
+    content: 'Arial';
+    font-family: 'Arial', sans-serif;
+}
+
+.ql-font-arial {
+    font-family: 'Arial', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=courier]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=courier]::before {
+    content: 'Courier';
+    font-family: 'Courier', sans-serif;
+}
+
+.ql-font-courier {
+    font-family: 'Courier', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=garamond]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=garamond]::before {
+    content: 'Garamond';
+    font-family: 'Garamond', sans-serif;
+}
+
+.ql-font-garamond {
+    font-family: 'Garamond', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=tahoma]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=tahoma]::before {
+    content: 'Tahoma';
+    font-family: 'Tahoma', sans-serif;
+}
+
+.ql-font-tahoma {
+    font-family: 'Tahoma', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=times-new-roman]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=times-new-roman]::before {
+    content: 'Times New Roman';
+    font-family: 'Times New Roman', sans-serif;
+}
+
+.ql-font-times-new-roman {
+    font-family: 'Times New Roman', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=verdana]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=verdana]::before {
+    content: 'Verdana';
+    font-family: 'Verdana', sans-serif;
+}
+
+.ql-font-verdana {
+    font-family: 'Verdana', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-bold]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-bold]::before {
+    content: 'Roboto-bold';
+    font-family: 'Roboto-bold', sans-serif;
+}
+
+.ql-font-roboto-bold {
+    font-family: 'Roboto-bold', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=aref-ruqaa]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=aref-ruqaa]::before {
+    content: 'aref-ruqaa';
+    font-family: 'aref-ruqaa', sans-serif;
+}
+
+.A {
+    font-family: 'aref-ruqaa', sans-serif;
+}
+
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=mirza]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=mirza]::before {
+    content: 'mirza';
+    font-family: 'mirza', sans-serif;
+}
+
+.ql-font-mirza {
+    font-family: 'mirza', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-light]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-light]::before {
+    content: 'Roboto-Light';
+    font-family: 'Roboto-Light', sans-serif;
+}
+
+.ql-font-roboto-light {
+    font-family: 'Roboto-Light', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-regular]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-regular]::before {
+    content: 'roboto-regular';
+    font-family: 'roboto-regular', sans-serif;
+}
+
+.ql-font-roboto-regular {
+    font-family: 'roboto-regular', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-blackitalic]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-blackitalic]::before {
+    content: 'roboto-blackitalic';
+    font-family: 'roboto-blackitalic', sans-serif;
+}
+
+.ql-font-roboto-blackitalic {
+    font-family: 'roboto-blackitalic', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-blackitalic]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-blackitalic]::before {
+    content: 'roboto-blackitalic';
+    font-family: 'roboto-blackitalic', sans-serif;
+}
+
+.ql-font-roboto-blackitalic {
+    font-family: 'roboto-blackitalic', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-thin]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-thin]::before {
+    content: 'roboto-thin';
+    font-family: 'roboto-thin', sans-serif;
+}
+
+.ql-font-roboto-thin {
+    font-family: 'roboto-thin', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=optima]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=optima]::before {
+    content: 'optima';
+    font-family: 'optima', sans-serif;
+}
+
+.ql-font-optima {
+    font-family: 'optima', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=optima-b]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=optima-b]::before {
+    content: 'optima-b';
+    font-family: 'optima-b', sans-serif;
+}
+
+.ql-font-optima-b {
+    font-family: 'optima-b', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=optima-italic]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=optima-italic]::before {
+    content: 'optima-italic';
+    font-family: 'optima-italic', sans-serif;
+}
+
+.ql-font-optima-italic {
+    font-family: 'optima-italic', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=optima-medium]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=optima-medium]::before {
+    content: 'optima-medium';
+    font-family: 'optima-medium', sans-serif;
+}
+
+.ql-font-optima-medium {
+    font-family: 'optima-medium', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-black]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-black]::before {
+    content: 'roboto-black';
+    font-family: 'roboto-black', sans-serif;
+}
+
+.ql-font-roboto-black {
+    font-family: 'roboto-black', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-bolditalic]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-bolditalic]::before {
+    content: 'roboto-bolditalic';
+    font-family: 'roboto-bolditalic', sans-serif;
+}
+
+.ql-font-roboto-bolditalic {
+    font-family: 'roboto-bolditalic', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-italic]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-italic]::before {
+    content: 'roboto-italic';
+    font-family: 'roboto-italic', sans-serif;
+}
+
+.ql-font-roboto-italic {
+    font-family: 'roboto-italic', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-lightitalic]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-lightitalic]::before {
+    content: 'roboto-lightitalic';
+    font-family: 'roboto-lightitalic', sans-serif;
+}
+
+.ql-font-roboto-lightitalic {
+    font-family: 'roboto-lightitalic', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-medium]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-medium]::before {
+    content: 'roboto-medium';
+    font-family: 'roboto-medium', sans-serif;
+}
+
+.ql-font-roboto-medium {
+    font-family: 'roboto-medium', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-mediumitalic]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-mediumitalic]::before {
+    content: 'roboto-mediumitalic';
+    font-family: 'roboto-mediumitalic', sans-serif;
+}
+
+.ql-font-roboto-mediumitalic {
+    font-family: 'roboto-mediumitalic', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=roboto-thinitalic]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=roboto-thinitalic]::before {
+    content: 'roboto-thinitalic';
+    font-family: 'roboto-thinitalic', sans-serif;
+}
+
+.ql-font-roboto-thinitalic {
+    font-family: 'roboto-thinitalic', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serpentine-icg-bold]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serpentine-icg-bold]::before {
+    content: 'serpentine-icg-bold';
+    font-family: 'serpentine-icg-bold', sans-serif;
+}
+
+.ql-font-serpentine-icg-bold {
+    font-family: 'serpentine-icg-bold', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serpentine-icg-light]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serpentine-icg-light]::before {
+    content: 'serpentine-icg-light';
+    font-family: 'serpentine-icg-light', sans-serif;
+}
+
+.ql-font-serpentine-icg-light {
+    font-family: 'serpentine-icg-light', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serpentine-icg-light]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serpentine-icg-light]::before {
+    content: 'serpentine-icg-light';
+    font-family: 'serpentine-icg-light', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serpentine-icg]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serpentine-icg]::before {
+    content: 'serpentine-icg';
+    font-family: 'serpentine-icg', sans-serif;
+}
+
+
+.ql-font-serpentine-icg-light {
+    font-family: 'serpentine-icg-light', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serpentine-icg-lightoblique]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serpentine-icg-lightoblique]::before {
+    content: 'serpentine-icg-lightoblique';
+    font-family: 'serpentine-icg-lightoblique', sans-serif;
+}
+
+.ql-font-serpentine-icg-lightoblique {
+    font-family: 'serpentine-icg-lightoblique', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serpentine-bold]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serpentine-bold]::before {
+    content: 'serpentine-bold';
+    font-family: 'serpentine-bold', sans-serif;
+}
+
+.ql-font-serpentine-bold {
+    font-family: 'serpentine-bold', sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serpentineef-bolditalic]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serpentineef-bolditalic]::before {
+    content: 'serpentineef-bolditalic';
+    font-family: 'serpentineef-bolditalic', sans-serif;
+}
+
+.ql-font-serpentineef-bolditalic {
+    font-family: 'serpentineef-bolditalic', sans-serif;
+}
+
+
+
+
+
+@mixin white-gradient {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7))
+    }
+}
+
+// Styling
+.slider-entes {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+
+    &::before,
+    &::after {
+        @include white-gradient;
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
+
+    &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+    }
+
+    .slide-track {
+        animation: scroll $animationSpeed linear infinite;
+        display: flex;
+        width: calc(250px * 14);
+    }
+
+    .slide-ente {
+        height: 100px;
+        width: 250px;
+    }
+}
